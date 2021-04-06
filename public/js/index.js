@@ -1,8 +1,9 @@
 const socket = io()
 const form = document.getElementById('chat-form')
+const user = document.querySelectorAll('.user')
+
 let messages = document.querySelector('ul')
 let input = document.querySelector('input')
-const user = document.querySelectorAll('.user')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -34,6 +35,7 @@ user.forEach((el) => {
 
 socket.on('message', (message) => {
     let element = document.createElement('li')
+    element.classList.add('other')
     element.textContent = message
     messages.appendChild(element)
     messages.scrollTop = messages.scrollHeight

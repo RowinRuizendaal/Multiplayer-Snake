@@ -24,6 +24,7 @@ main {
   background-color: #131C21;
   display: flex;
   border-radius: 10px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 .container .chat {
   position: relative;
@@ -31,13 +32,13 @@ main {
 }
 .container .chat .self {
   background-color: #056162;
-  margin-left: 90%;
   display: inline;
+  margin-left: 80%;
 }
 .container .chat img {
   height: 100%;
   width: 100%;
-  filter: brightness(50%);
+  filter: brightness(20%);
 }
 .container .chat ul {
   position: absolute;
@@ -52,6 +53,20 @@ main {
   background-color: #262D31;
   color: #fff;
   display: inline;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 5px;
+  text-align: center;
+}
+.container .chat ul .other {
+  background-color: #262D31;
+  color: #fff;
+  display: inline;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 80%;
 }
 .container .chat .message {
   width: 100%;
@@ -80,6 +95,23 @@ main {
   width: 350px;
   background: #131C21;
   overflow-y: auto;
+  border-top-left-radius: 10px;
+}
+.container aside button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 100%;
+}
+.container aside button:active .user {
+  background-color: #0F1A20;
+}
+.container aside button:focus .user {
+  background-color: #0F1A20;
 }
 .container aside .user {
   color: #fff;
@@ -89,12 +121,9 @@ main {
   cursor: pointer;
   margin-top: 1rem;
 }
-.container aside .user:active {
-  background-color: #0F1A20;
-}
 .container aside .user:hover {
   background-color: #0F1A20;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .container aside .user .avatar img {
   border-radius: 50%;
@@ -109,6 +138,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin-left: -15px;
+  align-items: baseline;
 }
 .container aside .user .details .green {
   color: #25D366;

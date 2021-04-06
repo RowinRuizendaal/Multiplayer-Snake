@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-@import 'variables.scss';
+@import 'variables/variables';
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #090E11;
+    background-color: $black-pearl;
     min-height: 100vh;
 }
 
@@ -22,21 +22,22 @@ main {
 .container {
     height: 100%;
     width: 1200px;
-    background-color: #131C21;
+    background-color: $black-pearl-shade;
     display: flex;
     border-radius: 10px;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .25);
     .chat {
         position: relative;
         width: 1200px;
         .self {
-            background-color: #056162;
-            margin-left: 90%;
+            background-color: $green;
             display: inline;
+            margin-left: 80%;
         }
         img {
             height: 100%;
             width: 100%;
-            filter: brightness(50%);
+            filter: brightness(20%);
         }
         ul {
             position: absolute;
@@ -47,9 +48,23 @@ main {
             display: flex;
             flex-direction: column;
             li {
-                background-color: #262D31;
+                background-color: $dark-blue;
                 color: #fff;
                 display: inline;
+                margin-bottom: 1rem;
+                position: relative;
+                border-radius: 5px;
+                text-align: center;
+            }
+            .other {
+                background-color: $dark-blue;
+                color: #fff;
+                display: inline;
+                margin-bottom: 1rem;
+                position: relative;
+                border-radius: 5px;
+                text-align: center;
+                margin-right: 80%;
             }
         }
         .message {
@@ -78,8 +93,29 @@ main {
     aside {
         height: 610px;
         width: 350px;
-        background: #131C21;
+        background: $black-pearl-shade;
         overflow-y: auto;
+        border-top-left-radius: 10px;
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            width: 100%;
+            &:active {
+                .user {
+                    background-color: #0F1A20;
+                }
+            }
+            &:focus {
+                .user {
+                    background-color: #0F1A20;
+                }
+            }
+        }
         .user {
             color: #fff;
             display: flex;
@@ -87,12 +123,9 @@ main {
             padding: 15px;
             cursor: pointer;
             margin-top: 1rem;
-            &:active {
-                background-color: #0F1A20;
-            }
             &:hover {
                 background-color: #0F1A20;
-                transition: 0.3s ease-in-out;
+                transition: 0.2s ease-in-out;
             }
             .avatar img {
                 border-radius: 50%;
@@ -106,6 +139,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 margin-left: -15px;
+                align-items: baseline;
                 .green {
                     color: #25D366;
                     font-size: 0.9rem;
