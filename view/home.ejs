@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat app</title>
     <link rel="stylesheet" href="css/main.css">
     <script defer src="./socket.io/socket.io.js"></script>
     <script defer src="./js/index.js"></script>
@@ -13,16 +13,104 @@
 
 <body>
     <main>
-        <article>
-            <ul>
-
-            </ul>
-
-            <form id="chat-form">
-                <input type="text" name="message" id="message">
-                <button type="submit">Send</button>
-            </form>
-        </article>
+        <section class="app">
+            <div class="container">
+                <!-- contacts -->
+                <aside>
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="./assets/user.jpg" alt="" srcset="">
+                        </div>
+                        <div class="details">
+                            <div class="name">
+                                <h3>Saskia Boom</h3>
+                            </div>
+                            <div class="message">
+                                <h6 class="green">Is aan het typen...</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="./assets/dirk.jpg" alt="" srcset="">
+                        </div>
+                        <div class="details">
+                            <div class="name">
+                                <h3>Dirk jan</h3>
+                            </div>
+                            <div class="message">
+                                <h6>Is goed man</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="./assets/marleen.jpg" alt="" srcset="">
+                        </div>
+                        <div class="details">
+                            <div class="name">
+                                <h3>Marleen Boter</h3>
+                            </div>
+                            <div class="message">
+                                <h6>Ja, lijkt me leuk 🎉</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="./assets/Irma.jpg" alt="" srcset="">
+                        </div>
+                        <div class="details">
+                            <div class="name">
+                                <h3>Irma sloot</h3>
+                            </div>
+                            <div class="message">
+                                <h6>Ik laat het je weten!</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="./assets/frans.jpg" alt="" srcset="">
+                        </div>
+                        <div class="details">
+                            <div class="name">
+                                <h3>Frans Kosse</h3>
+                            </div>
+                            <div class="message">
+                                <h6>🎈 Ik ben er klaar voor</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="avatar">
+                            <img src="./assets/user.jpg" alt="" srcset="">
+                        </div>
+                        <div class="details">
+                            <div class="name">
+                                <h3>Rowin</h3>
+                            </div>
+                            <div class="message">
+                                <h6>Dankjewel</h6>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- chat -->
+                <div class="chat">
+                    <!-- background -->
+                    <img src="./assets/background.jpg" alt="" srcset="">
+                    <ul>
+                    </ul>
+                    <div class="message">
+                        <form id="chat-form">
+                            <input type="text" name="message" id="message" placeholder="Type een bericht">
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
