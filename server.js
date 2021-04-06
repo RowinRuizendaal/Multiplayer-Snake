@@ -12,14 +12,19 @@ app.use(express.static(`${__dirname}/public`));
 app.set('view engine', 'ejs');
 app.set('views', 'view');
 
-
 io.on('connection', (socket) => {
     console.log('user connected');
+    let roomId = ''
 
     socket.on('message', (message) => {
-        io.emit('message', message)
+        // io.emit('message', message)
+        socket.to(roomId).emit('message', message)
     })
 
+    socket.on('joinRoom', (id) => {
+        roomId = id
+        socket.join(id)
+    })
 
     socket.on('disconnect', () => {
         console.log('user disconnected');
