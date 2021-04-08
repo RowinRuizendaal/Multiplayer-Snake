@@ -14,17 +14,30 @@ app.set('views', 'view');
 
 io.on('connection', (socket) => {
     console.log('user connected');
-    let roomId = ''
+    let roomId = '';
+    // socket.join(roomId)
 
     socket.on('message', (message) => {
-        // io.emit('message', message)
         socket.to(roomId).emit('message', message)
     })
 
     socket.on('joinRoom', (id) => {
+        // leave room first
+        socket.leave(roomId)
+
+        // reassign room id
         roomId = id
-        socket.join(id)
+
+        // join room with new id
+        socket.join(roomId)
+
+        // Get ammount of active members within a room
+        const count = io.sockets.adapter.rooms.get(`${roomId}`).size
+        console.log(`RoomId: ${roomId} count: ${count}`)
+            // socket.to(roomId).emit('count', count)
+        socket.broadcast.emit('count', count)
     })
+
 
     socket.on('disconnect', () => {
         console.log('user disconnected');

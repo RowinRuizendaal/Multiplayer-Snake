@@ -5,6 +5,8 @@ const user = document.querySelectorAll('.user')
 let messages = document.querySelector('ul')
 let input = document.querySelector('input')
 
+const onlineStatus = document.querySelector('header nav ul')
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -21,6 +23,8 @@ form.addEventListener('submit', (e) => {
 })
 
 
+
+
 user.forEach((el) => {
     el.addEventListener('click', () => {
         socket.emit('joinRoom', el.dataset.id)
@@ -32,6 +36,10 @@ user.forEach((el) => {
 })
 
 
+socket.on('count', (data) => {
+    onlineStatus.innerHTML = `${data} People are online`
+
+})
 
 socket.on('message', (message) => {
     let element = document.createElement('li')
