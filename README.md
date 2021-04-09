@@ -14,3 +14,4 @@
 - Join room
 - Choose snake color
 - Choose game theme
+- Change models
