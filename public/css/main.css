@@ -19,4 +19,8 @@ section #gameScreen div {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+#gamescreen {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
