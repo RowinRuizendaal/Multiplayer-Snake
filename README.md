@@ -4,4 +4,4 @@ This game allows multiple users to control their own snake, the best snake that 
 
 ### Concept & sketches
 
-![Homepage](https://rowinruizendaal.github.io/real-time-web-2021/img/snake.png)
+![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/snake.png)
