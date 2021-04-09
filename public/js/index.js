@@ -1,0 +1,87 @@
+// Config might store this in a seperate file
+const BG_COLOUR = '#231f20'
+const SNAKE_COLOUR = '#c2c2c2'
+const FOOD_COLOUR = '#e66916'
+
+
+const gameScreen = document.getElementById('gameScreen')
+
+let canvas, ctx;
+
+
+const gameState = {
+    player: {
+        pos: {
+            x: 3,
+            y: 10
+        },
+        vel: {
+            x: 1,
+            y: 0,
+        },
+        snake: [
+            { x: 1, y: 10 },
+            { x: 2, y: 10 },
+            { x: 3, y: 10 },
+        ],
+    },
+    food: {
+        x: 7,
+        y: 7,
+    },
+    gridsize: 20,
+}
+
+// setup canvas 
+function init() {
+    canvas = document.getElementById('canvas')
+    ctx = canvas.getContext('2d')
+
+    canvas.width = canvas.height = 600
+
+    ctx.fillstyle = BG_COLOUR
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+    document.addEventListener('keydown', keydown)
+}
+
+function keydown(e) {
+    console.log(e.keyCode)
+}
+
+init()
+
+
+function paintGame(state) {
+    ctx.fillStyle = BG_COLOUR;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+    const food = state.food;
+    const gridsize = state.gridsize
+    const size = canvas.width / gridsize
+
+
+
+    ctx.fillstyle = FOOD_COLOUR
+
+    // convert to pixels
+    ctx.fillRect(food.x * size, food.y * size, size, size)
+
+    paintPlayer(state.player, size, SNAKE_COLOUR)
+}
+
+function paintPlayer(playerState, size, colour) {
+    const snake = playerState.snake
+
+    ctx.fillstyle = colour
+
+
+    for (let cell of snake) {
+        console.log(cell)
+        console.log(size)
+        ctx.fillRect(20, 20, 100, 100);
+    }
+}
+
+paintGame(gameState)

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+}
+section .container {
+  height: 100vh;
+}
+section #gameScreen {
+  height: 100vh;
+}
+section #gameScreen div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}/*# sourceMappingURL=main.css.map */
