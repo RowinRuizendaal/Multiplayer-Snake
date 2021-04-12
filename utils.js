@@ -1,4 +1,4 @@
-function makeid() {
+function makeid(length) {
     let result = ''
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefhijklmnopqrstuvwxyz0123456789'
     let charactersLength = characters.length

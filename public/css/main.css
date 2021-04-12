@@ -1,26 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-section {
+body {
+  background-color: #1a1f2b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startGame .introheader {
+  color: #FFF;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+.startGame .flex {
+  display: flex;
+  flex-direction: column;
+}
+.startGame .flex p {
+  color: #FFF;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.startGame #gameScreen {
   height: 100vh;
 }
-section .container {
-  height: 100vh;
-}
-section #gameScreen {
-  height: 100vh;
-}
-section #gameScreen div {
+.startGame #gameScreen div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
+.startGame .form-group input[type=text] {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+.startGame #newGameButton,
+.startGame #joinGameButton {
+  font-weight: 300;
+  padding: 10px;
+  background-color: #00a994;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+.startGame #newGameButton:hover,
+.startGame #joinGameButton:hover {
+  background-color: #f63f63;
+}
 
-#gamescreen {
+#gameScreen {
   display: none;
+}
+#gameScreen #gameCodeDisplay {
+  color: #FFF;
 }/*# sourceMappingURL=main.css.map */
