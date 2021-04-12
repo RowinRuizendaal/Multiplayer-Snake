@@ -8,6 +8,8 @@
 
 body {
     background-color: #1a1f2b;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -66,5 +68,7 @@ body {
     display: none;
     #gameCodeDisplay {
         color: #FFF;
+        margin-bottom: 2rem;
+        font-size: 1.3rem
     }
 }

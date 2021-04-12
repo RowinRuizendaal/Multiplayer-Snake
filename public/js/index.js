@@ -19,9 +19,16 @@ const newGameBtn = document.getElementById('newGameButton')
 const joinGameBtn = document.getElementById('joinGameButton')
 const gameCodeInput = document.getElementById('gameCodeInput')
 const gameCodeDisplay = document.getElementById('gameCodeDisplay')
+const copyCode = document.getElementById('Copy')
+
+
+let getcode;
 
 newGameBtn.addEventListener('click', newGame)
 joinGameBtn.addEventListener('click', joinGame)
+copyCode.addEventListener('click', () => {
+    Clipboard_CopyTo(`${window.location.host}/?${getcode}`);
+})
 
 
 function newGame() {
@@ -114,8 +121,8 @@ function handleGameOver(data) {
 }
 
 function handleGameCode(gameCode) {
-    console.log(gameCode)
     gameCodeDisplay.textContent = `Your gamecode is: ${gameCode}`
+    getcode = gameCode
 }
 
 function handleUnknownCode() {
@@ -133,4 +140,22 @@ function reset() {
     gameCodeInput.value = ''
     initialScreen.style.display = "block"
     gameScreen.style.display = "none"
+}
+
+
+function Clipboard_CopyTo(value) {
+    var tempInput = document.createElement("input");
+    tempInput.value = value;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+}
+
+window.onload = () => {
+    let url = window.location.href;
+    if (url.includes('?')) {
+        const split = url.split(`?`)[1]
+        gameCodeInput.value = split
+    }
 }

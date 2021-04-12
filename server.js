@@ -61,7 +61,6 @@ io.on('connection', client => {
 
     function handleNewGame() {
         let roomName = makeid(5)
-        console.log(roomName)
         clientRooms[client.id] = roomName
         client.emit('gameCode', roomName)
 
