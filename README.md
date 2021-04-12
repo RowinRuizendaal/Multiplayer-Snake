@@ -8,6 +8,13 @@
 ![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/snake.png)
 
 
+
+### Dataflow
+
+![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/flow.png)
+
+
+
 ### Functionalities
 
 - Create room
