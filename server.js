@@ -38,7 +38,7 @@ io.on('connection', client => {
             allUsers = room.sockets
         }
 
-        let numClients = 0
+        let numClients = 1
 
         if (allUsers) {
             numClients = Object.keys(allUsers).length
