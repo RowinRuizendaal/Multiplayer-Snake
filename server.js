@@ -30,25 +30,25 @@ io.on('connection', client => {
     client.on('joinGame', handleJoinGame)
 
     function handleJoinGame(gameCode) {
-        const room = io.sockets.adapter.rooms[gameCode]
+        const room = io.sockets.adapter.rooms.get(`${gameCode}`)
 
         let allUsers;
 
         if (room) {
-            allUsers = room.sockets
+            allUsers = room
         }
 
-        let numClients = 1
+        let numClients = 0
 
         if (allUsers) {
-            numClients = Object.keys(allUsers).length
+            numClients = io.sockets.adapter.rooms.get(`${gameCode}`).size
         }
 
         // Nobody waiting
         if (numClients === 0) {
-            client.emit('unknownCode')
+            return client.emit('unknownCode')
         } else if (numClients > 1) {
-            client.emit('tooManyPlayers')
+            return client.emit('tooManyPlayers')
         }
 
         clientRooms[client.id] = gameCode
@@ -81,7 +81,6 @@ io.on('connection', client => {
         try {
             keyCode = parseInt(keyCode)
         } catch (e) {
-            console.error(e)
             return
         }
 

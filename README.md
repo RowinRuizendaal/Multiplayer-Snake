@@ -24,3 +24,7 @@
 - Choose snake color
 - Choose game theme
 - Change models
+
+
+![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/homescreen.png)
+
