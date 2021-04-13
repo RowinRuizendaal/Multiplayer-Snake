@@ -25,7 +25,9 @@ const gameCodeInput = document.getElementById('gameCodeInput')
 const gameCodeDisplay = document.getElementById('gameCodeDisplay')
 const copyCode = document.getElementById('Copy')
 
-
+let canvas, ctx
+let playerNumber
+let gameActive = false
 let getcode;
 
 
@@ -41,9 +43,6 @@ function joinGame() {
     init()
 }
 
-let canvas, ctx
-let playerNumber
-let gameActive = false
 
 function init() {
     initialScreen.style.display = 'none'
@@ -63,8 +62,7 @@ function init() {
     gameActive = true
 }
 
-function keydown(e, state) {
-    // console.log(state)
+function keydown(e) {
     socket.emit('keydown', e.keyCode)
 }
 
@@ -145,7 +143,7 @@ function reset() {
 
 // https://stackoverflow.com/questions/50795042/create-a-copy-button-without-an-input-text-box/50795833
 function Clipboard_CopyTo(value) {
-    var tempInput = document.createElement("input");
+    let tempInput = document.createElement("input");
     tempInput.value = value;
     document.body.appendChild(tempInput);
     tempInput.select();
@@ -156,7 +154,7 @@ function Clipboard_CopyTo(value) {
 newGameBtn.addEventListener('click', newGame)
 joinGameBtn.addEventListener('click', joinGame)
 copyCode.addEventListener('click', () => {
-    Clipboard_CopyTo(`${window.location.host}/?${getcode}`);
+    Clipboard_CopyTo(`${window.location.protocol}//${window.location.host}/?${getcode}`);
 })
 
 window.onload = () => {
