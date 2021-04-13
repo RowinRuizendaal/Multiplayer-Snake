@@ -1,7 +1,11 @@
-// Config might store this in a seperate file
-const BG_COLOUR = '#231f20'
-const SNAKE_COLOUR = '#c2c2c2'
-const FOOD_COLOUR = '#e66916'
+import { config } from './config.js'
+
+
+
+const BG_COLOUR = config.BG_COLOUR
+const SNAKE_COLOUR = config.SNAKE_COLOUR
+const OPPONENT_COLOUR = config.OPPONENT_COLOUR
+const FOOD_COLOUR = config.FOOD_COLOUR
 
 
 const socket = io(window.location.host)
@@ -24,11 +28,6 @@ const copyCode = document.getElementById('Copy')
 
 let getcode;
 
-newGameBtn.addEventListener('click', newGame)
-joinGameBtn.addEventListener('click', joinGame)
-copyCode.addEventListener('click', () => {
-    Clipboard_CopyTo(`${window.location.host}/?${getcode}`);
-})
 
 
 function newGame() {
@@ -64,7 +63,8 @@ function init() {
     gameActive = true
 }
 
-function keydown(e) {
+function keydown(e, state) {
+    // console.log(state)
     socket.emit('keydown', e.keyCode)
 }
 
@@ -81,7 +81,7 @@ function paintGame(state) {
 
 
     paintPlayer(state.players[0], size, SNAKE_COLOUR)
-    paintPlayer(state.players[1], size, 'red')
+    paintPlayer(state.players[1], size, OPPONENT_COLOUR)
 }
 
 function paintPlayer(playerState, size, colour) {
@@ -143,6 +143,7 @@ function reset() {
 }
 
 
+// https://stackoverflow.com/questions/50795042/create-a-copy-button-without-an-input-text-box/50795833
 function Clipboard_CopyTo(value) {
     var tempInput = document.createElement("input");
     tempInput.value = value;
@@ -151,6 +152,12 @@ function Clipboard_CopyTo(value) {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
 }
+
+newGameBtn.addEventListener('click', newGame)
+joinGameBtn.addEventListener('click', joinGame)
+copyCode.addEventListener('click', () => {
+    Clipboard_CopyTo(`${window.location.host}/?${getcode}`);
+})
 
 window.onload = () => {
     let url = window.location.href;

@@ -84,6 +84,11 @@ io.on('connection', client => {
             return
         }
 
+        // If game is over prevent server from crashing
+        if (!state[roomName]) {
+            return
+        }
+
         const vel = getUpdatedVelocity(keyCode)
 
         if (vel) {
