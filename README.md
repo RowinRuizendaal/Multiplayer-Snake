@@ -30,6 +30,8 @@
 - Join room
 - Copy gamecode
 - Play a harder version of snake
+- Collision with other players are detected
+- 
 
 
 
@@ -38,4 +40,11 @@
 - Choose snake color
 - Choose game theme
 - Change models
+
+
+### Shoutout
+
+[vuurvos1](https://github.com/vuurvos1) :
+
+> Helping me with Math logic
 
