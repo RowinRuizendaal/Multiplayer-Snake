@@ -1,5 +1,6 @@
 ### Multiplayer snake game
 
+2 players will battle each other in a snake battle, This game allows multiple users to control their own snake, the best snake that survives the longest, wins the game. The player can choose to make a new room or invite friends into their room.
 
 ### The app
 
@@ -8,9 +9,8 @@
 
 
 
-### Concept & sketches
+### Sketches
 
-2 players will battle each other in a snake battle, This game allows multiple users to control their own snake, the best snake that survives the longest, wins the game. The player can choose to make a new room or invite friends into their room.
 
 ![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/snake.png)
 
