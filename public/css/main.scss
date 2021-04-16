@@ -1,93 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #1a1f2b;
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.startGame {
-    .introheader {
-        color: #FFF;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
     }
-    .flex {
+    
+    body {
+        background-color: #1a1f2b;
+        height: 100vh;
         display: flex;
-        flex-direction: column;
-        p {
-            color: #FFF;
-            text-align: center;
-            font-weight: 400;
-            margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    canvas {
+        position: relative;
+        z-index: 0;
+        border: 2px solid #00a994;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .25);
+        border-radius: 10px;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, .1);
+            transition: 0.5s ease-in-out;
         }
     }
-    #gameScreen {
-        height: 100vh;
-        div {
+    
+    .startGame {
+        .introheader {
+            color: #FFF;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .flex {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            p {
+                color: #FFF;
+                text-align: center;
+                font-weight: 400;
+                margin-top: 1rem;
+            }
+        }
+        #gameScreen {
             height: 100vh;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
         }
-    }
-    .form-group {
-        input[type=text] {
-            width: 100%;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+        .form-group {
+            input[type=text] {
+                width: 100%;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                padding: 10px;
+            }
+        }
+        #newGameButton,
+        #joinGameButton {
+            font-weight: 300;
             padding: 10px;
+            background-color: #00a994;
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: #f63f63;
+            }
         }
     }
-    #newGameButton,
-    #joinGameButton {
-        font-weight: 300;
-        padding: 10px;
-        background-color: #00a994;
-        color: #FFF;
-        border: none;
-        cursor: pointer;
-        &:hover {
-            background-color: #f63f63;
+    
+    #gameScreen {
+        display: none;
+        #Copy {
+            display: block;
+            border: none;
+            padding: .5rem .5rem;
+            margin: 0;
+            text-decoration: none;
+            background: #00a994;
+            color: #ffffff;
+            font-family: sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            margin-bottom: 1rem;
+            &:hover {
+                background-color: #f63f63;
+            }
+        }
+        #gameCodeDisplay {
+            color: #FFF;
+            margin-bottom: 1rem;
+            font-size: 1.3rem
+        }
+        #countdown {
+            color: white;
+            text-align: center;
+            transition: 1s ease-in-out;
         }
     }
-}
-
-#gameScreen {
-    display: none;
-    #Copy {
-        display: block;
-        border: none;
-        padding: .5rem .5rem;
-        margin: 0;
-        text-decoration: none;
-        background: #00a994;
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        margin-bottom: 1rem;
-        &:hover {
-            background-color: #f63f63;
+    
+    @keyframes rotate {
+        100% {
+            transform: rotate(1turn);
         }
     }
-    #gameCodeDisplay {
-        color: #FFF;
-        margin-bottom: 1rem;
-        font-size: 1.3rem
-    }
-}

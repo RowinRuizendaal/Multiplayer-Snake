@@ -8,13 +8,29 @@
 
 body {
   background-color: #1a1f2b;
-  background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+canvas {
+  position: relative;
+  z-index: 0;
+  border: 2px solid #00a994;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+canvas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s ease-in-out;
 }
 
 .startGame .introheader {
@@ -88,4 +104,21 @@ body {
   color: #FFF;
   margin-bottom: 1rem;
   font-size: 1.3rem;
+}
+#gameScreen #countdown {
+  color: white;
+  text-align: center;
+  transition: 1s ease-in-out;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }/*# sourceMappingURL=main.css.map */
