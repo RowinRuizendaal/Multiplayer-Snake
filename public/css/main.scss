@@ -91,7 +91,6 @@
             text-decoration: none;
             background: #00a994;
             color: #ffffff;
-            font-family: sans-serif;
             font-size: 1rem;
             cursor: pointer;
             text-align: center;
@@ -111,11 +110,5 @@
             color: white;
             text-align: center;
             transition: 1s ease-in-out;
-        }
-    }
-    
-    @keyframes rotate {
-        100% {
-            transform: rotate(1turn);
         }
     }

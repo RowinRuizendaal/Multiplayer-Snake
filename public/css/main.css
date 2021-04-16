@@ -89,7 +89,6 @@ canvas::before {
   text-decoration: none;
   background: #00a994;
   color: #ffffff;
-  font-family: sans-serif;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
@@ -109,16 +108,4 @@ canvas::before {
   color: white;
   text-align: center;
   transition: 1s ease-in-out;
-}
-
-@-webkit-keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
 }/*# sourceMappingURL=main.css.map */

@@ -92,7 +92,7 @@ io.on("connection", (client) => {
 });
 
 async function startGameInterval(roomName) {
-    let timer = 10;
+    let timer = 5;
     const countdown = setInterval(() => {
         timer--;
         io.sockets.in(roomName).emit("countdown", timer);
