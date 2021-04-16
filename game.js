@@ -145,7 +145,7 @@ function randomFood(state) {
     state.food = food;
 }
 
-function getUpdatedVelocity(keycode) {
+function getUpdatedVelocity(keycode, clientID) {
     switch (keycode) {
         // left
         case 37:
@@ -180,6 +180,7 @@ function getUpdatedVelocity(keycode) {
                 };
             }
     }
+    test.push(clientID, keycode);
 }
 
 module.exports = {

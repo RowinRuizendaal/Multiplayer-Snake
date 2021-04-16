@@ -30,6 +30,7 @@ let canvas, ctx;
 let playerNumber;
 let gameActive = false;
 let getcode;
+let previousButton;
 
 function newGame() {
     socket.emit("newGame");
@@ -60,6 +61,13 @@ function init() {
 }
 
 function keydown(e) {
+    // use Math.abs return a value of 2 from the keycodes (absolute)
+    if (Math.abs(previousButton - e.keyCode) === 2) {
+        return;
+    }
+
+    previousButton = e.keyCode;
+
     socket.emit("keydown", e.keyCode);
 }
 
