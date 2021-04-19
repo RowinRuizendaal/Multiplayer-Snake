@@ -31,6 +31,8 @@ The player who goes out of the grid loses, also if there a collision between the
 - [Sources](#Sources)
 
 
+### Concept & sketches
+
 #### Realtime twitter tweets
 
 ![Twitter](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/twitter.jpg)
