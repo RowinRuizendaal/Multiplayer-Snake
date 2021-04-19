@@ -1,10 +1,6 @@
 ### Multiplayer snake game
 
-
 > [Made for Real-Time Web](https://github.com/cmda-minor-web/real-time-web-2021)
-
-2 players will battle each other in a snake battle, This game allows multiple users to control their own snake, the best snake that survives the longest, wins the game. The player can choose to make a new room or invite friends into their room.
-
 
 
 **Important note: You might have to lower your sound before playing a game :)**
@@ -16,12 +12,9 @@ Snake is the common name for a video game concept where the player maneuvers a l
 The player who goes out of the grid loses, also if there a collision between the two players, the player who caused the collision loses the match
 
 
-
 ### Live demo:
 
 [Multiplayer snake](https://realtime-web.herokuapp.com/)
-
-
 
 
 
@@ -35,8 +28,6 @@ The player who goes out of the grid loses, also if there a collision between the
 - [Install the app](#Install-the-application)
 - [Sources](#Sources)
 
-
-### Concept & sketches
 
 #### Realtime twitter tweets
 
@@ -100,7 +91,6 @@ Dotenv is a zero-dependency module that loads environment variables from a .env 
 [ejs](https://www.npmjs.com/package/ejs) : 
 
 Embedded JavaScript templates
-
 
 [express](https://www.npmjs.com/package/express) :
 
