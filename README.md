@@ -31,6 +31,8 @@ The player who goes out of the grid loses, also if there a collision between the
 
 #### Realtime twitter tweets
 
+![Twitter](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/twitter.jpg)
+
 
 #### Multiplayer snake game
 
@@ -77,8 +79,6 @@ The concept that I've chosen is: Multiplayer snake game
 - [ ] Choose game theme
 - [ ] Change models
 - [ ] setup database for scores/time
-
-
 
 
 
@@ -135,6 +135,27 @@ Once you have installed the project, execute the following command within your c
 
 
 ### Sources
+
+Chris DeLeon of HomeTeam GameDev. (2017, May 5). Coding “Snake” in 4 min 30 sec (plain browser JavaScript). YouTube. https://www.youtube.com/watch?v=xGmXxpIj6vs
+
+E. (n.d.). JavaScript Snake Game Tutorial: build a simple, interactive game. Educative: Interactive Courses for Software Developers. https://www.educative.io/blog/javascript-snake-game-tutorial
+
+Get started. (2021, April 19). Socket.IO. https://socket.io/get-started/chat
+
+how to get socket.io number of clients in room? (2015, July 17). Stack Overflow. https://stackoverflow.com/questions/31468473/how-to-get-socket-io-number-of-clients-in-room
+
+
+npm: dotenv. (2019, October 16). Npm. https://www.npmjs.com/package/dotenv
+
+npm: ejs. (2021, February 6). Npm. https://www.npmjs.com/package/ejs
+
+npm: express. (2019, May 26). Npm. https://www.npmjs.com/package/express
+
+npm: express-router. (2012, August 24). Npm. https://www.npmjs.com/package/express-router
+
+npm: nodemon. (2021, January 6). Npm. https://www.npmjs.com/package/nodemon
+
+npm: socket.io. (2021, April 1). Npm. https://www.npmjs.com/package/socket.io
 
 
 ### Dataflow
