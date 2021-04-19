@@ -19,10 +19,9 @@ The player who goes out of the grid loses, also if there a collision between the
 
 ### Live demo:
 
-
-### Sketches
-
 [Multiplayer snake](https://realtime-web.herokuapp.com/)
+
+
 
 
 
@@ -36,6 +35,8 @@ The player who goes out of the grid loses, also if there a collision between the
 - [Install the app](#Install-the-application)
 - [Sources](#Sources)
 
+
+### Concept & sketches
 
 #### Realtime twitter tweets
 
