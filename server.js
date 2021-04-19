@@ -5,7 +5,7 @@ const router = require("./routes/router");
 const io = require("socket.io")(http);
 const { initGame, gameLoop, getUpdatedVelocity } = require("./game");
 const { FRAME_RATE } = require("./constants");
-const { makeid } = require("./utils");
+const { lobbyid } = require("./utils");
 
 const port = process.env.PORT || 3000;
 
@@ -54,7 +54,7 @@ io.on("connection", (client) => {
     }
 
     function handleNewGame() {
-        let roomName = makeid(5);
+        let roomName = lobbyid(5);
         clientRooms[client.id] = roomName;
         client.emit("gameCode", roomName);
 
@@ -92,7 +92,7 @@ io.on("connection", (client) => {
 });
 
 async function startGameInterval(roomName) {
-    let timer = 5;
+    let timer = 6;
     const countdown = setInterval(() => {
         timer--;
         io.sockets.in(roomName).emit("countdown", timer);

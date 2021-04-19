@@ -1,4 +1,4 @@
-function makeid(length) {
+function lobbyid(length) {
     let result = "";
     let characters =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefhijklmnopqrstuvwxyz0123456789";
@@ -12,5 +12,5 @@ function makeid(length) {
 }
 
 module.exports = {
-    makeid,
+    lobbyid,
 };

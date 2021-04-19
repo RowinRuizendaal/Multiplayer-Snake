@@ -38,6 +38,10 @@ canvas {
   font-weight: 400;
   margin-top: 1rem;
 }
+.startGame .flex #error {
+  color: #f63f63;
+  margin-bottom: 1rem;
+}
 .startGame #gameScreen {
   height: 100vh;
 }
@@ -79,8 +83,31 @@ canvas {
   display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: white;
   font-size: 2.5rem;
+}
+#overlay #overlaycontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#overlay #overlaycontainer #rematch,
+#overlay #overlaycontainer #home {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #00a994;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+#overlay #overlaycontainer #rematch:hover,
+#overlay #overlaycontainer #home:hover {
+  background-color: #f63f63;
 }
 
 #gameScreen {
@@ -125,8 +152,8 @@ canvas {
 }
 #gameScreen .players .player1,
 #gameScreen .players .player2 {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   display: flex;
   flex-direction: column;
   margin-right: 1rem;

@@ -1,10 +1,12 @@
 import { config } from "./config.js";
 
+// Config for the game
 const BG_COLOUR = config.BG_COLOUR;
 const SNAKE_COLOUR = config.SNAKE_COLOUR;
 const OPPONENT_COLOUR = config.OPPONENT_COLOUR;
 const FOOD_COLOUR = config.FOOD_COLOUR;
 
+// Socket io
 const socket = io(window.location.host);
 
 socket.on("init", handleInit);
@@ -15,6 +17,7 @@ socket.on("unknownCode", handleUnknownCode);
 socket.on("tooManyPlayers", handleTooManyPlayers);
 socket.on("countdown", handleCountDown);
 
+// Document selectors
 const gameScreen = document.getElementById("gameScreen");
 const initialScreen = document.getElementById("initialScreen");
 const newGameBtn = document.getElementById("newGameButton");
@@ -23,10 +26,15 @@ const gameCodeInput = document.getElementById("gameCodeInput");
 const gameCodeDisplay = document.getElementById("gameCodeDisplay");
 const copyCode = document.getElementById("Copy");
 const countdown = document.getElementById("countdown");
+const overlayHeader = document.getElementById("gameover");
 const overlay = document.getElementById("overlay");
+const home = document.getElementById("home");
+const error = document.getElementById("error");
 
+// Audio
 const audio = new Audio("./sound/game-music.mp3");
 
+// Game variables
 let canvas, ctx;
 let playerNumber;
 let gameActive = false;
@@ -118,9 +126,9 @@ function handleGameOver(data) {
     overlay.style.display = "flex";
 
     if (data.winner === playerNumber) {
-        overlay.textContent = "You won the game";
+        overlayHeader.textContent = "You won the game";
     } else {
-        overlay.textContent = "You lost the game";
+        overlayHeader.textContent = "You lost the game";
     }
 }
 
@@ -131,7 +139,7 @@ function handleGameCode(gameCode) {
 
 function handleUnknownCode() {
     reset();
-    alert("Unknown Game Code");
+    error.textContent = "We are unable to find that game";
 }
 
 function handleTooManyPlayers() {
@@ -160,6 +168,8 @@ function reset() {
     gameCodeInput.value = "";
     initialScreen.style.display = "block";
     gameScreen.style.display = "none";
+    overlay.style.display = "none";
+    countdown.textContent = "";
 }
 
 // https://stackoverflow.com/questions/50795042/create-a-copy-button-without-an-input-text-box/50795833
@@ -174,6 +184,7 @@ function Clipboard_CopyTo(value) {
 
 newGameBtn.addEventListener("click", newGame);
 joinGameBtn.addEventListener("click", joinGame);
+home.addEventListener("click", reset);
 copyCode.addEventListener("click", () => {
     Clipboard_CopyTo(
         `${window.location.protocol}//${window.location.host}/?${getcode}`
