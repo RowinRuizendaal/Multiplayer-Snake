@@ -2,6 +2,9 @@
 
 > [Made for Real-Time Web](https://github.com/cmda-minor-web/real-time-web-2021)
 
+<img src="img/homescreen.png">
+<img src="img/game.png">
+
 
 **Important note: You might have to lower your sound before playing a game :)**
 

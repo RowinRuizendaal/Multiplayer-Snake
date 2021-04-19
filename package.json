@@ -4,7 +4,8 @@
     "description": "Real time web app",
     "main": "server.js",
     "scripts": {
-        "dev": "npx nodemon server,js"
+        "start": "npx node server.js",
+        "dev": "npx nodemon server.js"
     },
     "repository": {
         "type": "git",
