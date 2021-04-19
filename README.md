@@ -22,7 +22,7 @@ The player who goes out of the grid loses, also if there a collision between the
 
 - [Concepts](#Concept-&-sketches)
 - [Chosen concept](#Chosen-concept)
-- [What does this app do?](#What-does-this-app-do?)
+- [What does this app do?](#What-does-this-app-do)
 - [Wishlist](#Wishlist)
 - [Used packages](#Used-packages)
 - [Install the app](#Install-the-application)
@@ -45,7 +45,7 @@ The player who goes out of the grid loses, also if there a collision between the
 The concept that I've chosen is: Multiplayer snake game
 
 
-### What does this app do?
+### What does this app do
 
 - Create room
 - Join room (with gamecode)
