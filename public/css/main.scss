@@ -116,4 +116,28 @@
             text-align: center;
             transition: 1s ease-in-out;
         }
+        .players {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1rem;
+            align-items: center;
+            h4 {
+                color: #FFF;
+            }
+            .player1,
+            .player2 {
+                height: 40px;
+                width: 40px;
+                display: flex;
+                flex-direction: column;
+                margin-right: 1rem;
+            }
+            .player1 {
+                background-color: #c2c2c2;
+            }
+            .player2 {
+                margin-left: 1rem;
+                background-color: #f63f63;
+            }
+        }
     }
