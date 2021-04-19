@@ -62,12 +62,19 @@ https://standardjs.com/rules.html
 ## Authors
 
 [Stan Bankras](https://github.com/StanBankras)  
+
 [Oussama Fahchouch](https://github.com/ofahchouch-gh)  
-[Rowin Ruizendaal](https://github.com/RowinRuizendaal)  
-[Johan van Beusekom](https://github.com/johancvb)  
+
+[Rowin Ruizendaal](https://github.com/RowinRuizendaal) 
+
+[Johan van Beusekom](https://github.com/johancvb) 
+
 [Nathan Bommezijn](https://github.com/dewarian)  
+
 [Sergio Eijben](https://github.com/HappyPantss)  
+
 [Sam Slotenmaker](https://github.com/SamSlotemaker)
+
 [Inju Michorius](https://github.com/InjuMichorius)
 
 ## License
