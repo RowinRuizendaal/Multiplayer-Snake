@@ -1,6 +1,10 @@
 ### Multiplayer snake game
 
+<<<<<<< HEAD
 > [Made for Real-Time Web](https://github.com/cmda-minor-web/real-time-web-2021)
+=======
+2 players will battle each other in a snake battle, This game allows multiple users to control their own snake, the best snake that survives the longest, wins the game. The player can choose to make a new room or invite friends into their room.
+>>>>>>> 289308ee7c9c32d8864febda028b750ae1db127d
 
 
 **Important note: You might have to lower your sound before playing a game :)**
@@ -11,8 +15,13 @@ Snake is the common name for a video game concept where the player maneuvers a l
 
 The player who goes out of the grid loses, also if there a collision between the two players, the player who caused the collision loses the match
 
+<<<<<<< HEAD
 
 ### Live demo:
+=======
+### Sketches
+
+>>>>>>> 289308ee7c9c32d8864febda028b750ae1db127d
 
 [Multiplayer snake](https://realtime-web.herokuapp.com/)
 
@@ -52,6 +61,7 @@ The concept that I've chosen is: Multiplayer snake game
 - Detects how many players are in the room
 - Copy gamecode
 - Play a harder version of snake
+<<<<<<< HEAD
 - Plays music during the match (Doom :fire:)
 - Detects if player goes out of grid
 - Detects if there is any collision between the players
@@ -91,6 +101,10 @@ Dotenv is a zero-dependency module that loads environment variables from a .env 
 [ejs](https://www.npmjs.com/package/ejs) : 
 
 Embedded JavaScript templates
+=======
+- Collision with other players are detected
+- 
+>>>>>>> 289308ee7c9c32d8864febda028b750ae1db127d
 
 [express](https://www.npmjs.com/package/express) :
 
@@ -143,4 +157,11 @@ Once you have installed the project, execute the following command within your c
 
 
 
+
+
+### Shoutout
+
+[vuurvos1](https://github.com/vuurvos1) :
+
+> Helping me with Math logic
 
