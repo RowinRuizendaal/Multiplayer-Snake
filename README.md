@@ -67,7 +67,8 @@ https://standardjs.com/rules.html
 [Johan van Beusekom](https://github.com/johancvb)  
 [Nathan Bommezijn](https://github.com/dewarian)  
 [Sergio Eijben](https://github.com/HappyPantss)  
-[Sam Slotenmaker](https://github.com/SamSlotemaker)  
+[Sam Slotenmaker](https://github.com/SamSlotemaker)
+[Inju Michorius](https://github.com/InjuMichorius)
 
 ## License
 
