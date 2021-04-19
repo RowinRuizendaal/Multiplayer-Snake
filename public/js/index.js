@@ -37,8 +37,7 @@ function newGame() {
     init();
 }
 
-function joinGame() {
-    const code = gameCodeInput.value;
+function joinGame(code) {
     socket.emit("joinGame", code);
     init();
 }
@@ -182,7 +181,7 @@ copyCode.addEventListener("click", () => {
 window.onload = () => {
     const url = window.location.href;
     if (url.includes("?")) {
-        const split = url.split(`?`)[1];
-        gameCodeInput.value = split;
+        const gameCodeInput = url.split(`?`)[1];
+        joinGame(gameCodeInput);
     }
 };
