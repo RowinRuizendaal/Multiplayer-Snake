@@ -61,7 +61,6 @@ The concept that I've chosen is: Multiplayer snake game
 - Detects how many players are in the room
 - Copy gamecode
 - Play a harder version of snake
-<<<<<<< HEAD
 - Plays music during the match (Doom :fire:)
 - Detects if player goes out of grid
 - Detects if there is any collision between the players
@@ -101,10 +100,7 @@ Dotenv is a zero-dependency module that loads environment variables from a .env 
 [ejs](https://www.npmjs.com/package/ejs) : 
 
 Embedded JavaScript templates
-=======
-- Collision with other players are detected
-- 
->>>>>>> 289308ee7c9c32d8864febda028b750ae1db127d
+
 
 [express](https://www.npmjs.com/package/express) :
 
