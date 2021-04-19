@@ -33,16 +33,20 @@ The player who goes out of the grid loses, also if there a collision between the
 
 ### Concept & sketches
 
-#### Realtime twitter tweets
 
 ![Twitter](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/twitter.jpg)
 
+#### Realtime twitter tweets
+
+Getting realtime twitter tweets with filters, so if i setup a filter to retrieve tweets with the hashtags: programming, I will only receive these in my overview which I can also archive or save it into the database.
+
+
+
+![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/snake.png)
 
 #### Multiplayer snake game
 
 2 players will battle each other in a snake battle, This game allows multiple users to control their own snake, the best snake that survives the longest, wins the game. The player can choose to make a new room or invite friends into their room.
-
-![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/snake.png)
 
 
 ### Chosen concept
