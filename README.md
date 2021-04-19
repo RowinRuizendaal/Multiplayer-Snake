@@ -24,6 +24,7 @@ The player who goes out of the grid loses, also if there a collision between the
 - [Chosen concept](#Chosen-concept)
 - [What does this app do?](#What-does-this-app-do)
 - [Wishlist](#Wishlist)
+- [Data flowchart](#data=flowchart)
 - [Used packages](#Used-packages)
 - [Install the app](#Install-the-application)
 - [Sources](#Sources)
@@ -80,6 +81,10 @@ The concept that I've chosen is: Multiplayer snake game
 - [ ] Change models
 - [ ] setup database for scores/time
 
+
+### data flowchart
+
+![data-flow](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/dataflow.png)
 
 
 ### Used packages
@@ -161,7 +166,6 @@ npm: socket.io. (2021, April 1). Npm. https://www.npmjs.com/package/socket.io
 ### Dataflow
 
 ![Homepage](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/flow.png)
-
 
 
 
