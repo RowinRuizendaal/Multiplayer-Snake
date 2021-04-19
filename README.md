@@ -167,6 +167,8 @@ Once you have installed the project, execute the following command within your c
 
 Chris DeLeon of HomeTeam GameDev. (2017, May 5). Coding “Snake” in 4 min 30 sec (plain browser JavaScript). YouTube. https://www.youtube.com/watch?v=xGmXxpIj6vs
 
+Create a Copy Button Without an Input Text Box. (2018, June 11). Stack Overflow. https://stackoverflow.com/questions/50795042/create-a-copy-button-without-an-input-text-box/50795833
+
 E. (n.d.). JavaScript Snake Game Tutorial: build a simple, interactive game. Educative: Interactive Courses for Software Developers. https://www.educative.io/blog/javascript-snake-game-tutorial
 
 Get started. (2021, April 19). Socket.IO. https://socket.io/get-started/chat

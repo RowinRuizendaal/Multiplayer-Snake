@@ -23,6 +23,7 @@ const gameCodeInput = document.getElementById("gameCodeInput");
 const gameCodeDisplay = document.getElementById("gameCodeDisplay");
 const copyCode = document.getElementById("Copy");
 const countdown = document.getElementById("countdown");
+const overlay = document.getElementById("overlay");
 
 const audio = new Audio("./sound/game-music.mp3");
 
@@ -114,11 +115,12 @@ function handleGameOver(data) {
 
     gameActive = false;
     audio.pause();
+    overlay.style.display = "flex";
 
     if (data.winner === playerNumber) {
-        alert("You Win!");
+        overlay.textContent = "You won the game";
     } else {
-        alert("You lost");
+        overlay.textContent = "You lost the game";
     }
 }
 
