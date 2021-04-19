@@ -24,6 +24,7 @@ The player who goes out of the grid loses, also if there a collision between the
 - [Chosen concept](#Chosen-concept)
 - [What does this app do?](#What-does-this-app-do)
 - [Wishlist](#Wishlist)
+- [Real-time events](#Real-time-events)
 - [Data flowchart](#data-flowchart)
 - [Used packages](#Used-packages)
 - [Install the app](#Install-the-application)
@@ -81,6 +82,29 @@ The concept that I've chosen is: Multiplayer snake game
 - [ ] Change models
 - [ ] setup database for scores/time
 
+
+### Real-time events
+
+New game
+
+> Makes a new game room with a unique ID for the players to play in that room
+
+Join game
+
+> Join the game with a unique code, the server checks if this is a valid code or not
+
+
+Keydown
+
+> Every button presses (arrows) are being captured and sent the server, to calculate the new position of the snake
+
+emitGameState
+
+> Check if the game already started or not
+
+emitGameover
+
+> If the game is over, return the winner of the game
 
 ### data flowchart
 
