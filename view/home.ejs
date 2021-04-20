@@ -28,6 +28,14 @@
                     <button type="submit" id="joinGameButton">
                             Join Game
                         </button>
+                    <h3 class="leaderboard">Leaderboards</h3>
+                    <% data.forEach(function(data) {%>
+                        <p>
+                            <%= data.username %>
+                                with
+                                <%= data.wins %> wins
+                        </p>
+                        <% }) %>
                 </div>
             </div>
         </section>

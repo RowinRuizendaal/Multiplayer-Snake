@@ -27,13 +27,12 @@ firebase.initializeApp({
     projectId: process.env.FIREBASE_PROJECT_ID,
 });
 
-// Pages required
-const homepage = require("./src/home");
-const username = require("./src/username");
+const login = require("./src/username");
+const lobby = require("./src/home");
 const endgame = require("./src/endgame");
-// Make routes
-router.use("/", homepage);
-router.use("/", username);
+
+router.use("/", login);
+router.use("/", lobby);
 router.use("/", endgame);
 
 module.exports = router;

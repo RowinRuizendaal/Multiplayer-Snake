@@ -3,11 +3,11 @@ const router = express.Router();
 const firebase = require("firebase");
 const { uuid } = require("uuidv4");
 
-router.get("/nickname", (req, res) => {
+router.get("/", (req, res) => {
     res.render("login");
 });
 
-router.post("/nickname", async(req, res) => {
+router.post("/game", async(req, res) => {
     nickname = req.body.nickname.toLowerCase();
 
     const db = firebase.firestore();
@@ -19,7 +19,8 @@ router.post("/nickname", async(req, res) => {
             username: nickname.toLowerCase(),
             wins: 0,
         });
-        return res.render("home");
+
+        return res.redirect("lobby");
     }
 
     snapshot.forEach((doc) => {
@@ -28,9 +29,8 @@ router.post("/nickname", async(req, res) => {
             data: doc.data(),
         };
     });
-
     req.session.save(() => {
-        return res.render("home");
+        return res.redirect("lobby");
     });
 });
 

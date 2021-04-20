@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/nickname.js" defer type="module"></script>
     <title>Snake game set nickname</title>
 </head>
 
 <body>
     <main>
-        <form action="/nickname" method="POST">
+        <form id='setnickname' action="/game" method="POST">
             <h2 class="username">Pick a username</h2>
             <input type="text" name="nickname" id="nickname">
             <button type="submit" class="setnickname">Set nickname</button>
