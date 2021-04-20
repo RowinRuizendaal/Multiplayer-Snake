@@ -127,6 +127,12 @@ function handleGameOver(data) {
 
     if (data.winner === playerNumber) {
         overlayHeader.textContent = "You won the game";
+        fetch(`http://${window.location.host}/endgame`, {
+            method: "POST",
+            body: {
+                data: "",
+            },
+        });
     } else {
         overlayHeader.textContent = "You lost the game";
     }

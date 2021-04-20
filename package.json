@@ -18,11 +18,15 @@
     },
     "homepage": "https://github.com/RowinRuizendaal/real-time-web-2021#readme",
     "dependencies": {
+        "body-parser": "^1.19.0",
         "dotenv": "^8.2.0",
         "ejs": "^3.1.6",
         "express": "^4.17.1",
         "express-router": "0.0.1",
+        "express-session": "^1.17.1",
+        "firebase": "^8.4.1",
         "nodemon": "^2.0.7",
-        "socket.io": "^4.0.1"
+        "socket.io": "^4.0.1",
+        "uuidv4": "^6.2.7"
     }
 }

@@ -53,7 +53,7 @@ io.on("connection", (client) => {
         startGameInterval(gameCode);
     }
 
-    function handleNewGame() {
+    async function handleNewGame() {
         let roomName = lobbyid(5);
         clientRooms[client.id] = roomName;
         client.emit("gameCode", roomName);
