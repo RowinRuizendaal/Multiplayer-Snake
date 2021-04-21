@@ -23,6 +23,15 @@ canvas {
   overflow: hidden;
 }
 
+.startGame #initialScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
 .startGame .introheader {
   color: #FFF;
   margin-bottom: 2rem;
@@ -200,7 +209,11 @@ canvas {
 }
 
 .leaderboard {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   color: white;
+  align-items: center;
+  margin-left: 1rem;
   margin-top: 5rem;
 }/*# sourceMappingURL=main.css.map */
