@@ -8,10 +8,33 @@
     <link rel="stylesheet" href="css/main.css">
     <script defer src="./socket.io/socket.io.js"></script>
     <script defer type="module" src="js/index.js"></script>
+    <script defer src="js/nav.js"></script>
     <title>Multiplayer snake</title>
 </head>
 
 <body>
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <h3>Leaderboard top 10</h3>
+                    <% data.forEach(function(data) {%>
+                        <li>
+                            <%= data.username %>
+                                with
+                                <%= data.wins %> win(s)
+                        </li>
+                        <% }) %>
+            </div>
+            </div>
+            </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <section class="startGame">
             <div id="initialScreen">
@@ -28,16 +51,6 @@
                     <button type="submit" id="joinGameButton">
                             Join Game
                         </button>
-                </div>
-                <div class="leaderboard">
-                    <h3>Leaderboard top 10</h3>
-                    <% data.forEach(function(data) {%>
-                        <p>
-                            <%= data.username %>
-                                with
-                                <%= data.wins %> wins
-                        </p>
-                        <% }) %>
                 </div>
             </div>
         </section>
