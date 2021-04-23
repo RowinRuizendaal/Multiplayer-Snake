@@ -19,7 +19,7 @@ router.get("/lobby", async(req, res) => {
         });
     }
 
-    return res.render("home");
+    return res.render("login.ejs");
 });
 
 module.exports = router;
