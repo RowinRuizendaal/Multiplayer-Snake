@@ -114,7 +114,7 @@ emitGameover
 
 > If the game is over, return the winner of the game
 
-### data flowchart
+### snake data flowchart 
 
 ![data-flow](https://raw.githubusercontent.com/RowinRuizendaal/Multiplayer-Snake/feature/individual-project/img/dataflow.png)
 
