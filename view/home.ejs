@@ -22,13 +22,19 @@
                 <span></span>
                 <ul id="menu">
                     <h3>Leaderboard top 10</h3>
-                    <% data.forEach(function(data) {%>
-                        <li>
-                            <%= data.username %>
-                                with
-                                <%= data.wins %> win(s)
-                        </li>
-                        <% }) %>
+                    <% let i = 1 %>
+                        <% data.forEach(function(data) {%>
+                            <li>
+                                <%= `#${i} : ${data.username}` %>
+                                    with
+                                    <% if (data.wins > 2) {%>
+                                        <strong><%= data.wins %> wins</strong>
+                                        <% } else { %>
+                                            <strong><%= data.wins %> win</strong>
+                                            <% } %>
+                            </li>
+                            <% i++ %>
+                                <% }) %>
             </div>
             </div>
             </ul>

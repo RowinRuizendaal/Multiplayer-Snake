@@ -310,9 +310,10 @@ nav {
   padding: 10px 0;
   font-size: 1.2rem;
   font-weight: 300;
+  text-transform: capitalize;
 }
-#menu li::first-letter {
-  text-transform: uppercase;
+#menu .wins {
+  font-weight: bold;
 }
 
 #menuToggle input:checked ~ ul {
