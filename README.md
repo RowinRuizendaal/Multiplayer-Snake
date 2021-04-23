@@ -85,10 +85,10 @@ The concept that I've chosen is: Multiplayer snake game
 #### Should haves
 
 - [x] Match has a countdown before the game begins
+- [x] Setup database for scores/time
 - [ ] Choose snake color
 - [ ] Choose game theme
 - [ ] Change models
-- [ ] setup database for scores/time
 
 
 ### Real-time events
@@ -145,6 +145,14 @@ nodemon is a tool that helps develop node.js based applications by automatically
 
 Socket io enables real-time bidirectional event-based communication
 
+[firebase](https://www.npmjs.com/package/firebase)
+
+Firebase provides the tools and infrastructure you need to develop, grow, and earn money from your app. This package supports web (browser), mobile-web, and server (Node.js) clients.
+
+[uuidv4](https://www.npmjs.com/package/uuidv4)
+
+uuidv4 creates v4 UUIDs
+
 
 ### Install the application
 
@@ -183,7 +191,6 @@ Get started. (2021, April 19). Socket.IO. https://socket.io/get-started/chat
 
 how to get socket.io number of clients in room? (2015, July 17). Stack Overflow. https://stackoverflow.com/questions/31468473/how-to-get-socket-io-number-of-clients-in-room
 
-
 npm: dotenv. (2019, October 16). Npm. https://www.npmjs.com/package/dotenv
 
 npm: ejs. (2021, February 6). Npm. https://www.npmjs.com/package/ejs
@@ -192,9 +199,15 @@ npm: express. (2019, May 26). Npm. https://www.npmjs.com/package/express
 
 npm: express-router. (2012, August 24). Npm. https://www.npmjs.com/package/express-router
 
+npm: firebase. (2021, April 13). Npm. https://www.npmjs.com/package/firebase
+
 npm: nodemon. (2021, January 6). Npm. https://www.npmjs.com/package/nodemon
 
 npm: socket.io. (2021, April 1). Npm. https://www.npmjs.com/package/socket.io
+
+npm: uuidv4. (2021, March 25). Npm. https://www.npmjs.com/package/uuidv4
+
+Perform simple and compound queries in Cloud Firestore |. (n.d.). Firebase. Retrieved April 23, 2021, from https://firebase.google.com/docs/firestore/query-data/queries#node.js
 
 
 

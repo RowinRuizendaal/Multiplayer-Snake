@@ -25,9 +25,9 @@
                     <% let i = 1 %>
                         <% data.forEach(function(data) {%>
                             <li>
-                                <%= `#${i} : ${data.username}` %>
+                                <%= `#${i} ${data.username}` %>
                                     with
-                                    <% if (data.wins > 2) {%>
+                                    <% if (data.wins >= 2) {%>
                                         <strong><%= data.wins %> wins</strong>
                                         <% } else { %>
                                             <strong><%= data.wins %> win</strong>
