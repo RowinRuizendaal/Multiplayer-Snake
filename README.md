@@ -160,7 +160,6 @@ uuidv4 creates v4 UUIDs
 
 > git clone https://github.com/RowinRuizendaal/Multiplayer-Snake.git
 
-#### install the application
 
 Cd to the multiplayer snake game directory and:
 
@@ -173,8 +172,6 @@ or install it with yarn:
 Once you have installed the project, execute the following command within your code editor:
 
 > npm run dev
-
-
 
 
 
