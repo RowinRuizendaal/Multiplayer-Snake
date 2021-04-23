@@ -116,7 +116,7 @@ emitGameover
 
 ### data flowchart
 
-![data-flow](https://raw.githubusercontent.com/RowinRuizendaal/real-time-web-2021/feature/individual-project/img/dataflow.png)
+![data-flow](https://raw.githubusercontent.com/RowinRuizendaal/Multiplayer-Snake/feature/individual-project/img/dataflow.png)
 
 
 ### Used packages
