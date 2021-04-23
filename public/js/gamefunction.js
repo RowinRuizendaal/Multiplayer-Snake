@@ -171,6 +171,6 @@ function Clipboard_CopyTo(value) {
 
 select.copyCode.addEventListener("click", () => {
     Clipboard_CopyTo(
-        `${window.location.protocol}//${window.location.host}/?${getcode}`
+        `${window.location.protocol}//${window.location.host}/lobby/${getcode}`
     );
 });

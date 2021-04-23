@@ -30,11 +30,3 @@ select.joinGameBtn.addEventListener("click", () => {
     joinGame(input);
 });
 select.home.addEventListener("click", reset);
-
-window.onload = () => {
-    const url = window.location.href;
-    if (url.includes("?")) {
-        const gameCodeInput = url.split(`?`)[1];
-        joinGame(gameCodeInput);
-    }
-};
