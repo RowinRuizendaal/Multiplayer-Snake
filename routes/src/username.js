@@ -10,7 +10,12 @@ router.get("/", (req, res) => {
 router.post("/game", async(req, res) => {
     nickname = req.body.nickname.toLowerCase();
 
-    if (nickname === "" || !nickname || nickname === undefined) {
+    if (
+        nickname === "" ||
+        !nickname ||
+        nickname === undefined ||
+        nickname.length > 20
+    ) {
         return res.redirect("lobby");
     }
 
