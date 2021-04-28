@@ -27,7 +27,7 @@ The player who goes out of the grid loses, also if there a collision between the
 - [What does this app do?](#What-does-this-app-do)
 - [Wishlist](#Wishlist)
 - [Real-time events](#Real-time-events)
-- [Data flowchart](#data-flowchart)
+- [Data flowchart](#snake-data-flowchart)
 - [Used packages](#Used-packages)
 - [Install the app](#Install-the-application)
 - [Sources](#Sources)
@@ -114,7 +114,7 @@ emitGameover
 
 > If the game is over, return the winner of the game
 
-### data flowchart
+### snake data flowchart 
 
 ![data-flow](https://raw.githubusercontent.com/RowinRuizendaal/Multiplayer-Snake/feature/individual-project/img/dataflow.png)
 
