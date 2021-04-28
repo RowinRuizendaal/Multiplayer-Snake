@@ -103,7 +103,6 @@ export function handleGameOver(data) {
     gameActive = false;
     audio.pause();
     overlay.style.display = "flex";
-
     if (data.winner === playerNumber) {
         select.overlayHeader.textContent = "You won the game";
 

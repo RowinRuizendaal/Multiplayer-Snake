@@ -8,7 +8,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/game", async(req, res) => {
-    console.log(req.params);
     nickname = req.body.nickname.toLowerCase();
 
     if (

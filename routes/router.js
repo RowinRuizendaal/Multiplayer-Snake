@@ -24,7 +24,7 @@ router.use(
 );
 
 const corsOptions = {
-    origin: "https://realtime-web.herokuapp.com/",
+    origin: process.env.ORIGIN,
     optionsSuccessStatus: 200,
 };
 
