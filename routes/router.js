@@ -4,6 +4,8 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const firebase = require("firebase");
+const cors = require("cors");
+
 router.use(
     bodyParser.urlencoded({
         extended: true,
@@ -21,6 +23,11 @@ router.use(
     })
 );
 
+const corsOptions = {
+    origin: "http://testing.com",
+    optionsSuccessStatus: 200,
+};
+
 firebase.initializeApp({
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -33,6 +40,6 @@ const endgame = require("./src/endgame");
 
 router.use("/", login);
 router.use("/", lobby);
-router.use("/", endgame);
+router.use("/", endgame, cors(corsOptions));
 
 module.exports = router;

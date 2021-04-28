@@ -3,9 +3,9 @@ const app = express();
 const http = require("http").createServer(app);
 const router = require("./routes/router");
 const io = require("socket.io")(http);
-const { initGame, gameLoop, getUpdatedVelocity } = require("./game");
-const { FRAME_RATE } = require("./constants");
-const { lobbyid } = require("./utils");
+const { initGame, gameLoop, getUpdatedVelocity } = require("./src/game");
+const { FRAME_RATE } = require("./src/constants");
+const { lobbyid } = require("./src/utils");
 
 const port = process.env.PORT || 3000;
 
