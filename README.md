@@ -90,6 +90,7 @@ The concept that I've chosen is: Multiplayer snake game
 - [ ] Choose snake color
 - [ ] Choose game theme
 - [ ] Change models
+- [ ] Have a quick rematch with your opponent
 
 
 ### Real-time events
