@@ -80,7 +80,8 @@ The concept that I've chosen is: Multiplayer snake game
 - [x] Player is able to see their gamecode and send invite link
 - [x] In each game there is a winner
 - [x] Snake food is begin generated in the grid
-
+- [x] Collision is detected || if player goes out of the grid
+- [x] Snake is getting longer after eating food
 
 
 #### Should haves
